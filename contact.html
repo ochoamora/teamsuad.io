@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contacto - Premium Gamer</title>
+    <style>
+        /* Estilo global */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #1c1c1c;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        /* Cabecera */
+        header {
+            background: #6a1aeb;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f7c24e;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Botón de acciones */
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons button {
+            padding: 10px 20px;
+            border: none;
+            background: #f7c24e;
+            color: #1c1c1c;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .auth-buttons button:hover {
+            background: #ffd700;
+        }
+
+        .contact-container {
+            margin-top: 120px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 2rem;
+            color: #f7c24e;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            gap: 50px;
+        }
+
+        .contact-info div {
+            max-width: 300px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .contact-form {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 1rem;
+            color: #f7c24e;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #f7c24e;
+            color: #1c1c1c;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffd700;
+        }
+
+        /* Mapa de ubicación */
+        .map-container {
+            margin-top: 40px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            color: #ffffff;
+            background: #6a1aeb;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">      </div>
+        <img src="mw3.png" alt="Icono Inicio" style="height: 40px;">
+        <nav>
+            <a href="home.html">🏠Inicio</a>
+            <a href="acerca de.html">Acerca de</a>
+            <a href="services.html">Servicios</a>
+            <a href="#contact.html">Contacto</a>
+        </nav>
+        <div class="auth-buttons">
+            <button onclick="location.href='login.html'">Iniciar Sesión</button>
+            <button onclick="location.href='register.html'">Registrarse</button>
+        </div>
+    </header>
+
+    <!-- Contenedor de contacto -->
+    <div class="contact-container">
+        <h2>Contacto</h2>
+
+        <!-- Información de contacto -->
+        <div class="contact-info">
+            <div>
+                <h3>Dirección</h3>
+                <p>Calle Ficticia 123, Ciudad, País</p>
+            </div>
+              <div>
+                  <h3>Teléfono</h3>
+                  <p>(+34) 123 456 789</p>
+               </div>
+            <div>
+                <h3>Correo Electrónico</h3>
+                <p>contacto@suadgamer.com</p>
+            </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <div class="contact-form">
+            <h3>Envíanos un mensaje</h3>
+            <form action="submit_message.html" method="POST">
+                 <label for="name">Nombre</label>
+                 <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+                 <label for="email">Correo Electrónico</label>
+                 <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+                 <label for="message">Mensaje</label>
+                 <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
+    
+    </div>
+
+<!-- Pie de página -->
+<footer>
+    <p>&copy; 2024 Team Suad . Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
